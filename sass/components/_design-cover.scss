@@ -1,0 +1,126 @@
+
+
+.design-cover{
+	position: relative;
+	background-color: #ffffff;
+	box-shadow: $shadow-light;
+
+	&__img{
+		position: absolute;
+		@include centerHV;
+
+		width: 85%;
+		height: 85%;
+		border-radius: 10%;
+		box-shadow: $shadow-default;
+	}
+
+	&__content{
+		position: absolute;
+		left: 0;
+		top: 50%;
+
+		width: 100%;
+		height: 50%;
+	}
+
+	&__title{
+		position: absolute;
+		@include centerH;
+		top: 50%;
+		z-index: 100;
+		opacity: 0;
+		text-align: center;
+
+		width: 100%;
+		transition: all .6s;
+
+		@media(hover: none){
+			opacity: 1;
+			@include centerHV;
+		}	
+		
+		&--main{
+			font-size: 1.6rem;
+
+			@include respond(big-tab-land){
+				font-size: 1.5rem;
+			}
+
+			@include respond(big-tab-port){
+				font-size: 1.6rem;
+				margin-bottom: .5px;
+			}
+
+			@include respond(sm-tab-port){
+				font-size: 1.5rem;
+			}
+
+			@include respond(big-phone){
+				font-size: 2.55rem;
+			}
+		}
+
+
+		&--sub{
+			font-size: 1.1rem;
+			color: $color-red;
+			text-transform: lowercase;
+
+			@include respond(sm-tab-land){
+				font-size: 1.2rem;
+			}
+
+			@include respond(big-phone){
+				font-size: 1.9rem;
+			}
+
+			@include respond(sm-phone){
+				font-size: 1.8rem;
+			}
+
+			@include respond(med-desktop){
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	//to make the design-cover responsive 
+	&::before{
+		content: "";
+		display: block;
+		padding-top: 100%;
+	}
+
+	//white transparent background to display project title
+	&::after{
+		display: inline-block;
+		position: absolute;
+		z-index: 10;
+		bottom: 0;
+
+		content: "";
+		width: 100%;
+		height: 0%;
+		background-color: rgba(#ffffff, .9);
+		transition: height .6s;
+
+		@media(hover:none){
+			height: 50%;
+		}
+	}
+
+	&:hover{
+		box-shadow: 0 1px 3px rgba(#000000, .4);
+		
+		//hover to show the animation of white transparent background appearing
+		&::after{
+			height: 50%;
+		}
+	}
+
+	&:hover &__title{
+		opacity: 1;
+		@include centerHV;
+	}
+}

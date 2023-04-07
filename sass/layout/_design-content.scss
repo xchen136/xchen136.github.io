@@ -1,0 +1,205 @@
+
+
+.design-content{	
+	position: relative;
+	width: 90%;
+	height: 77vh;
+	margin: 0 auto;
+	background-color: $color-primary;
+	box-shadow: $shadow-default;
+
+	overflow: scroll;
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	@include respond(big-tab-port){
+		width: 100%;
+	}
+
+	@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+		height: 100% !important;
+	}
+
+	&__main{
+		position: relative;	
+		display: inline-block;
+		text-align: center;
+		float: left;	
+		width: 60%;
+		height: 100%;
+
+		@include respond(sm-tab-port){
+			position: absolute;
+			@include centerH;
+			float: none;
+			width: 80%;
+			height: auto;
+		}
+
+		@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+			position: absolute;
+			@include centerH;
+			float: none;
+			width: 80%;
+			height: auto;
+		}
+	}
+
+	&__info{
+		&-sticky{
+			position: sticky;							
+			display: inline-block;
+			width: 34%;
+			top: 4rem;								//for position:sticky to work;
+			float: left;							
+
+			@include respond(big-tab-land){
+				top: 3rem;
+			}
+
+			@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+				position: relative;
+
+				@include centerH;
+				top: 0;
+				min-width: 80%;
+				height: max-content;
+				padding: 4.5rem 0 10rem;
+			}		
+		}
+
+		&-relative{
+			position: relative;
+			display: inline-block;
+			width: 34%;
+			height: 100%;
+			padding-top: 4rem;
+
+			@include respond(big-tab-land){
+				padding-top: 3rem;
+			}
+			
+			@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+				float: left;
+
+				@include centerH;
+				min-width: 80%;
+				height: max-content;
+				padding: 4.5rem 0 10rem;
+			}
+
+		}
+	}	
+
+
+	&__sub{
+		width: 100%;
+		height: max-content;
+		margin-top: 10rem;
+	}
+
+
+	&__img{
+		display: block;
+		margin: 0 auto 10rem;
+		box-shadow: $shadow-default;
+
+		&--med{
+			max-width: 60%;
+
+			@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+				max-width: 80%;
+			}
+		}
+
+		&--reg{
+			max-width: 70%;
+
+			&:first-of-type{
+				margin-top: 5rem;
+
+				@include respond(big-tab-land){
+					margin-top: 4rem;
+				}
+
+				@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+					margin-top: 0;
+				}
+			}
+
+			@include respond(big-tab-land){
+				max-width: 43rem;
+			}
+
+			@include respond(big-tab-port){
+				max-width: 77%;
+			}
+
+			@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+				max-width: 100%;
+			}
+		}
+
+		&--big{
+			max-width: 85%;
+
+			@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+				max-width: 80%;
+			}
+		}
+		
+		//must be 1.5x bigger than orig chopstick image for proportional ratio
+		&--chopstick{
+			max-width: 90%;
+
+			@media (max-width: 46.88em), (hover:none){		//sm-tab-port	
+				max-width: 80%;
+			}
+		}
+	}
+
+
+	&__description{
+		width: 100%;
+	    margin-bottom: 2.5rem;
+
+		font-size: 1.4rem;
+		line-height: 2.7rem;
+		color: $color-gray-dark;
+		word-break: normal;
+	    white-space: normal;
+
+		@include respond(sm-tab-land){
+			font-size: 1.5rem;
+		}
+
+		@include respond(big-tab-port){
+			font-size: 1.4rem;
+			line-height: 2.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+			font-size: 2.3rem;
+			line-height: 4rem;
+			margin: 1.5rem 0 5rem;
+		}
+
+		@include respond(big-phone){
+			margin-top: 2rem;
+		}
+
+		@include respond(sm-phone){
+			font-size: 2.5rem;
+			line-height: 4.5rem;
+		}
+
+		@include respond(med-desktop){
+			font-size: 1.6rem;
+			line-height: 3rem;
+		}
+	}
+} 

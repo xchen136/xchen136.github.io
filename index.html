@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/png" href="img/icon/favicon-32.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script> <!-- copay email -->
+
+	<title>Xiaomin Chen</title>
+</head>
+
+<body class="main-background">
+	<header id="home-header" class="header">
+		<div class="header__profile">
+			<div class="header__profile-logo-box">
+				<img class="header__profile-avatar header__profile-logo" 
+					 alt="xiaomin's cartoon avatar"
+					 srcset="img/avatar/cartoon_avatar-1x.png 1x, img/avatar/cartoon_avatar-2x.png 2x"
+					 src="img/avatar/cartoon_avatar-2x.png">
+
+				<img class="header__profile-avatar header__profile-photo" 
+					 alt="xiaomin's photo"
+					 srcset="img/avatar/portrait_avatar-1x.jpg 1x, img/avatar/portrait_avatar-2x.jpg 2x"
+					 src="img/avatar/portrait_avatar-2x.jpg">
+			</div>
+
+			<div class="header__divider-box">
+				<div class="header__divider-line"></div>
+			</div>
+
+			<div class="header__content">
+				<h1 class="heading-primary">
+					<div class="heading-primary--main">Xiaomin Chen</div>
+					<div class="heading-primary--sub">//front-end developer & graphic designer</div>
+				</h1>
+
+				<div class="header__profileLinks">
+					<a class="header__profileItem" href="https://github.com/xchen136" target="_blank"><i class="fab fa-github-square"></i></a>
+					
+					<a class="header__profileItem" href="https://www.linkedin.com/in/xiaomin-chen18" target="_blank"><i class="fab fa-linkedin"></i></a>
+					
+					<a class="header__profileItem" href="https://www.instagram.com/wata.hia/" target="_blank"><i class="fab fa-instagram"></i></a>
+					
+					<a class="header__profileItem header__profileItem--email" tooltip="click to copy email" data-clipboard-text="to.xiaominchen@gmail.com">
+						<i class="fas fa-envelope-square"></i>
+					</a>
+					
+					<span class="header__btn-resume">
+						<a href="xiaomin_chen_resume.pdf" download>resume</a>
+					</span>
+				</div>		
+
+				<footer class="footer--home">@2019 Xiaomin Chen</footer>		
+			</div>
+		</div>
+
+		<nav id="home-nav" class="section-tab">
+			<ul>
+				<li class="section-tab__item section-tab__item--about"><a class="section-tab__link" href="#about">about</a></li>
+				<li class="section-tab__item section-tab__item--design"><a class="section-tab__link" href="#design">design</a></li>
+				<li class="section-tab__item section-tab__item--develop"><a class="section-tab__link" href="#develop">develop</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main class="content">
+		<section id="about" class="section-about">
+			
+			<div class="section-title">
+				<div class="section-title__divider"></div>
+				<h2 class="heading-secondary heading-secondary--sectionTitle">about.</h2>		
+			</div>
+
+			<p class="section-about__summary">I am a curious self-starter who is eager to experiment new web techonologies with passion in coding and design. I love building things from scratch and being able to visually see my contributions in real-time. It is the satisfaction of overcoming new development challenges that motivates me to built more.</p>
+
+			<div class="skill-box row">
+				<div class="col-1-of-3">
+					<img class="icon" 
+						 alt="icon for technology"
+						 srcset="img/icon/icon-tech-1x.png 1x, img/icon/icon-tech-2x.png 2x"
+						 src="img/icon/icon-tech-2x.png">
+
+					<h3 class="heading-tertiary skill-title">Tech</h3>
+					<ul class="skill">
+						<li class="skill__item">HTML</li>
+						<li class="skill__item">CSS</li>
+						<li class="skill__item">JavaScript</li>
+						<li class="skill__item">jQuery</li>
+						<li class="skill__item">Java</li>
+						<li class="skill__item">C++</li>
+					</ul>
+				</div>
+				<div class="col-1-of-3">
+					<img class="icon" 
+						 alt="icon for tool"
+						 srcset="img/icon/icon-tool-1x.png 1x, img/icon/icon-tool-2x.png 2x"
+						 src="img/icon/icon-tool-2x.png">
+					<h3 class="heading-tertiary skill-title">Tool</h3>
+					<ul class="skill">
+						<li class="skill__item">Adobe XD</li>
+						<li class="skill__item">Adobe Illustrator</li>
+						<li class="skill__item">Adobe InDesign</li>
+						<li class="skill__item">Adobe Photoshop</li>
+						<li class="skill__item">Sublime Text 3</li>
+						<li class="skill__item">GitHub</li>
+					</ul>
+				</div>
+				<div class="col-1-of-3">
+					<img class="icon" 
+						 alt="icon for design"
+						 srcset="img/icon/icon-design-1x.png 1x, img/icon/icon-design-2x.png 2x"
+					     src="img/icon/icon-design-2x.png">
+					<h3 class="heading-tertiary skill-title">Design</h3>
+					<ul class="skill">
+						<li class="skill__item">Logo</li>
+						<li class="skill__item">Poster</li>
+						<li class="skill__item">Brochure</li>
+						<li class="skill__item">Application</li>
+						<li class="skill__item">Website</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-design"><!-- Jumping to <section> fail to change section-tab color to yellow -->
+			
+			<!-- To jump to a nice location -->
+			<div id="design" class="locator"></div>
+
+			<div class="section-title">
+				<div class="section-title__divider section-title__divider--long"></div>
+				<h2 class="heading-secondary heading-secondary--sectionTitle">design.</h2>			
+			</div>
+
+			<div class="section-design__content">
+				<div class="row">
+					<div class="col-1-of-4">
+						<a href="design-chopstick.html">
+							<div class="design-cover">
+								<img class="design-cover__img" 
+									 alt="cropped cover for chopstick expedition's booklet design"
+									 srcset="img/design-cover/chopstick-1x.jpg 1x, img/design-cover/chopstick-2x.jpg 2x"
+									 src="img/design-cover/chopstick-2x.jpg">	
+								
+								<div class="design-cover__content">
+									<div class="design-cover__title">
+										<p class="design-cover__title--main">Chopstick</p>
+										<p class="design-cover__title--sub">Booklet</p>		
+									</div>	
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-1-of-4">
+						<a href="design-yusaku.html">
+							<div class="design-cover">
+								<img class="design-cover__img" 
+									 alt="cropped cover for kamekura yusaku's design project"
+									 srcset="img/design-cover/yusaku-eblast-1x.jpg 1x, 
+									         img/design-cover/yusaku-eblast-2x.jpg 2x"
+								 	 src="img/design-cover/yusaku-eblast-2x.jpg">
+
+								<div class="design-cover__content">
+									<div class="design-cover__title">
+										<p class="design-cover__title--main">Yusaku</p>
+										<p class="design-cover__title--sub">Poster + Flyer</p>	
+									</div>	
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-1-of-4">
+						<a href="design-ohny.html">
+							<div class="design-cover">
+								<img class="design-cover__img" 
+									 alt="cropped cover for open house new york's brochure design"
+									 srcset="img/design-cover/ohny-1x.jpg 1x, img/design-cover/ohny-2x.jpg 2x" 
+									 src="img/design-cover/ohny-2x.jpg">
+
+								<div class="design-cover__content">
+									<div class="design-cover__title">
+										<p class="design-cover__title--main">OHNY</p>
+										<p class="design-cover__title--sub">Brochure</p>			
+									</div>	
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-1-of-4">
+						<a href="design-metrofare.html">
+							<div class="design-cover">
+								<img class="design-cover__img" 
+									 alt="cropped cover for metrofare refill's app interface design"
+									 srcset="img/design-cover/metrofare-refill-1x.jpg 1x, 
+									      img/design-cover/metrofare-refill-2x.jpg 2x" 
+									 src="img/design-cover/metrofare-refill-2x.jpg">
+								
+								<div class="design-cover__content">
+									<div class="design-cover__title">
+										<p class="design-cover__title--main">MetroFare Refill</p>
+										<p class="design-cover__title--sub">App Interface</p>			
+									</div>	
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-1-of-4">
+						<a href="design-forest.html">
+							<div class="design-cover">
+								<img class="design-cover__img" 
+									 alt="cropped cover for the forest's movie poster design"
+								     srcset="img/design-cover/the-forest-1x.jpg 1x, img/design-cover/the-forest-2x.jpg 2x" 
+								     src="img/design-cover/the-forest-2x.jpg">		
+								
+								<div class="design-cover__content">
+									<div class="design-cover__title">
+										<p class="design-cover__title--main">The Forest</p>
+										<p class="design-cover__title--sub">Poster</p>					
+									</div>	
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-1-of-4">
+						<a href="design-sexualOffense.html">
+							<div class="design-cover">
+								<img class="design-cover__img" 
+									 alt="cropped cover for sexual offense's data visualization poster design"
+									 srcset="img/design-cover/sexual-offense-1x.jpg 1x, 
+									 		 img/design-cover/sexual-offense-2x.jpg 2x" 
+									 src="img/design-cover/sexual-offense-2x.jpg">
+								<div class="design-cover__content">
+									<div class="design-cover__title">
+										<p class="design-cover__title--main">Sexual Offense</p>
+										<p class="design-cover__title--sub">Poster</p>					
+									</div>	
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-1-of-4">
+						<a href="design-skyscraper.html">
+							<div class="design-cover">
+								<img class="design-cover__img" 
+									 alt="cropped cover for walking skyscraper's typography poster design"
+									 srcset="img/design-cover/walking-skyscraper-1x.jpg 1x, 
+									 		 img/design-cover/walking-skyscraper-2x.jpg 2x" 
+									 src="img/design-cover/walking-skyscraper-2x.jpg">
+								<div class="design-cover__content">
+									<div class="design-cover__title">
+										<p class="design-cover__title--main">Skyscraper</p>
+										<p class="design-cover__title--sub">Poster</p>					
+									</div>	
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-1-of-4">
+						<a href="design-superstudio.html">
+							<div class="design-cover">
+								<img class="design-cover__img" 
+									 alt="cropped cover for superstudio's world vision visual identity design"
+									 srcset="img/design-cover/superstudio-1x.png 1x, img/design-cover/superstudio-2x.png 2x" 
+									 src="img/design-cover/superstudio-2x.png">
+								<div class="design-cover__content">
+									<div class="design-cover__title">
+										<p class="design-cover__title--main">Superstudio</p>
+										<p class="design-cover__title--sub">Logo</p>					
+									</div>	
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>	
+			</div>
+
+			
+		</section>
+
+		<section class="section-develop"> <!-- section-tab won't change to yellow when it jumps to this location-->
+			
+			<!-- to jump to a nice looking location-->
+			<div id="develop" class="locator"></div>
+
+			<div class="section-title">
+				<div class="section-title__divider"></div>
+				<h2 class="heading-secondary heading-secondary--sectionTitle">develop.</h2>			
+			</div>
+
+			<div class="row">	
+				<div class="col-1-of-3 col-1-of-1">	
+					<div class="develop-cover">
+						<div class="develop-cover__content">
+							<img class="develop-cover__img" 
+								 alt="cover for the rgb color match coding project"
+								 srcset="img/develop-cover/rgb-game-1x.png 1x, img/develop-cover/rgb-game-2x.png 2x" 
+								 src="img/develop-cover/rgb-game-2x.png">
+							
+							<div class="develop-cover__title">
+								<p class="develop-cover__title--main">RGB Color Match</p>
+								<p class="develop-cover__title--sub">HTML, CSS, JavaScript</p>	
+							</div>
+						</div>
+
+						<div class="develop-cover__btns">
+							<a class="develop-cover__link develop-cover__link--left" href="coding-project/rgb-game/RGBgame.html" target="_blank">view</a>
+							<a class="develop-cover__link develop-cover__link--right" href="https://github.com/xchen136/RGB-Color-Match" target="_blank">code</a>
+						</div>
+					</div>
+				</div>	
+
+				<div class="col-1-of-3 col-1-of-1">	
+					<div class="develop-cover">	
+						<div class="develop-cover__content">
+							<img class="develop-cover__img" 
+								 alt="cover for the todo list coding project"
+								 srcset="img/develop-cover/todo-list-1x.png 1x, img/develop-cover/todo-list-2x.png 2x" 
+								 src="img/develop-cover/todo-list-2x.png">	
+							
+
+							<div class="develop-cover__title">
+								<p class="develop-cover__title--main">To-Do List</p>
+								<p class="develop-cover__title--sub">HTML, CSS, jQuery</p>
+							</div>
+						</div>
+
+						<div class="develop-cover__btns">
+							<a class="develop-cover__link develop-cover__link--left" href="coding-project/todo-list/todo.html" target="_blank">view</a>
+							<a class="develop-cover__link develop-cover__link--right" href="https://github.com/xchen136/To-do-List" target="_blank">code</a>
+						</div>
+					</div>
+				</div>	
+
+				<div class="col-1-of-3 col-1-of-1">	
+					<div class="develop-cover">	
+						<div class="develop-cover__content">
+							<img class="develop-cover__img" 
+								 alt="cover for the patatap coding project"
+								 srcset="img/develop-cover/patatap-1x.png 1x, img/develop-cover/patatap-2x.png 2x" 
+								 src="img/develop-cover/patatap-2x.png">	
+							
+							<div class="develop-cover__title">
+								<p class="develop-cover__title--main">Patatap Clone</p>
+								<p class="develop-cover__title--sub">HTML, CSS, jQuery, Paper.js, Howler,js</p>
+							</div>
+						</div>
+
+						<div class="develop-cover__btns">
+							<a class="develop-cover__link develop-cover__link--left" href="coding-project/patatap-clone/patatap.html" target="_blank">view</a>
+							<a class="develop-cover__link develop-cover__link--right" href="https://github.com/xchen136/Patatap-Clone" target="_blank">code</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+
+			<div class="row">	
+				<!-- <div class="col-1-of-3 col-1-of-1">	
+					<div class="develop-cover">	
+						<div class="develop-cover__content">
+							<img class="develop-cover__img" 
+								 alt="cover for the step counting data visualization coding project"
+								 srcset="img/develop-cover/step-counting-1x.png 1x, 
+								 		 img/develop-cover/step-counting-2x.png 2x" 
+								 src="img/develop-cover/step-counting-2x.png">	
+
+							<div class="develop-cover__title">
+								<p class="develop-cover__title--main">Data Visualization</p>
+								<p class="develop-cover__title--sub">HTML, CSS, jQuery, D3.js</p>
+							</div>
+						</div>
+
+						<div class="develop-cover__btns">
+							<a class="develop-cover__link develop-cover__link--left" href="coding-project/step-counting/step-counting.html" target="_blank">view</a>
+							<a class="develop-cover__link develop-cover__link--right" href="https://github.com/xchen136/Step-Counting-and-Screen-Time" target="_blank">code</a>
+						</div>
+					</div>
+				</div>	 -->
+
+				<div class="col-1-of-3 col-1-of-1">	
+					<div class="develop-cover">	
+						<div class="develop-cover__content">
+							<img class="develop-cover__img" 
+								 alt="cover for the song finder coding project"
+								 srcset="img/develop-cover/song-finder-1x.png 1x, img/develop-cover/song-finder-2x.png 2x" 
+								 src="img/develop-cover/song-finder-2x.png">	
+
+							<div class="develop-cover__title">
+								<p class="develop-cover__title--main">Song Track Finder</p>
+								<p class="develop-cover__title--sub">HTML, CSS, jQuery, last.fm API</p>
+							</div>
+						</div>
+
+						<div class="develop-cover__btns">
+							<a class="develop-cover__link develop-cover__link--left" href="coding-project/song-track-finder/song-track-finder.html" target="_blank">view</a>
+							<a class="develop-cover__link develop-cover__link--right" href="https://github.com/xchen136/Song-Track" target="_blank">code</a>
+						</div>
+					</div>
+				</div>	
+
+<!-- 				<div class="col-1-of-3 col-1-of-1">	
+					<div class="develop-cover">	
+						<div class="develop-cover__content">
+							<img class="develop-cover__img" src="#" alt="image cover for coding project ---">
+							
+							<div class="develop-cover__title">
+								<p class="develop-cover__title--main">Coming Soon...</p>
+								<p class="develop-cover__title--sub">%$#%#I^</p>
+							</div>
+						</div>
+
+						<div class="develop-cover__btns">
+							<a class="develop-cover__link develop-cover__link--left" href="#develop" target="_blank">view</a>
+							<a class="develop-cover__link develop-cover__link--right" href="#develop" target="_blank">code</a>
+						</div>
+					</div>
+				</div>	 -->
+			</div>
+		</section>
+
+		<section class="section-contact"></section>
+	</main>
+	
+	<script type="text/javascript" src="js/homepage.js"></script>
+</body>
+</html>

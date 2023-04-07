@@ -1,0 +1,53 @@
+
+.scroll-indicator{
+	position: absolute;
+	top: -4%;
+	right: 7%;
+
+	min-width: 11%;
+	min-height: 100%;
+
+	@include respond(big-tab-land){
+		top: -2%;
+	}
+
+	@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+		display: none;
+	}
+
+	&__element{
+		position: absolute;
+		z-index: 10;
+		bottom: -5%;
+		text-align: right;
+		transform: rotate(-90deg);
+		transform-origin: 50% 0% 0;
+
+		width: 10rem;
+		height: max-content;
+		padding: .5rem .5rem .25rem 0;
+		border-bottom: 1px solid $color-gray;
+
+		font-size: 1.5rem;
+		color: $color-gray;
+
+		@include respond(big-tab-land){
+			bottom: -4%;
+		}
+	}
+
+	&__circle{
+		position: absolute; 
+		display: inline-block;
+		z-index: -1;
+		bottom: 1px;
+		right: 0;
+		
+		width: 2rem;
+		height: 2rem;
+		border-radius: 50%;
+		background-color: #ffffff;
+
+		animation: scrollDown linear 1.5s infinite;
+	}
+}

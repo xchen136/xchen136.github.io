@@ -1,0 +1,92 @@
+
+
+@mixin clearfix{
+	&::after{
+		content: "";
+		display: table;
+		clear: both;		
+	}
+}
+
+
+//center block elements both horizontally & vertically
+@mixin centerHV{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+//center block elements horizontally
+@mixin centerH{
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+
+//center block elements vertically
+@mixin centerV{
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+//MEDIA QUERY MANAGER
+/*
+
+<Pixel Range>		<$breakpoint argument choices>
+0 - 400px 			Tiny Phone
+400 - 500px:		Small Phone;
+500 - 600px: 		Big Phone;
+600 - 750px: 		Small Tablet portrait;
+750 - 900px: 		Big Tablet portrait;
+900 - 1050px:		Small Tablet landscape;
+1050 - 1200px:		Big Tablet landscape;
+1200 - 1800px:		Normal style;
+1500 - 1800px;		Medium Desktop;
+1800 - 2000px:		Big Desktop;
+2000+px:            Huge Desktop;
+
+1rem/em = 16px according to browser
+*/
+
+@mixin respond($breakpoint){
+	@if $breakpoint == tiny-phone {
+		@media (max-width: 25em) { @content }; 				//400px/16px
+	}
+
+	@if $breakpoint == sm-phone {
+		@media (max-width: 31.25em) { @content }; 			//500px/16px
+	}
+
+	@if $breakpoint == big-phone {
+		@media (max-width: 37.5em) { @content }; 			//600px/16px
+	}
+
+	@if $breakpoint == sm-tab-port {
+		@media (max-width: 46.88em) { @content }; 			//750px/16px
+	}	
+
+	@if $breakpoint == big-tab-port {
+		@media (max-width: 56.25em) { @content }; 			//900px/16px
+	}
+
+	@if $breakpoint == sm-tab-land {
+		@media (max-width: 65.625em) { @content }; 			//1050px/16px
+	}
+
+	@if $breakpoint == big-tab-land {
+		@media (max-width: 75em) { @content }; 				//1200px/16px
+	}
+
+	@if $breakpoint == med-desktop {
+		@media (min-width: 93.75em) { @content }; 			//1500px/16px
+	}
+
+	@if $breakpoint == big-desktop {
+		@media (min-width: 112.5em) { @content }; 			//1800px/16px
+	}
+
+	@if $breakpoint == huge-desktop {
+		@media (min-width: 125em) { @content }; 			//2000px/16px
+	}
+}

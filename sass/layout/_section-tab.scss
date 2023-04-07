@@ -1,0 +1,66 @@
+
+.section-tab{
+	position: absolute;
+	top: 8rem;
+	left: 33rem;
+	z-index: -1;
+	float: left;	
+
+	@include respond(big-tab-land){
+		left: $header-width-tabLand;
+	}
+
+	@include respond(big-tab-port){
+		display: none;
+	}
+
+	@include respond(med-desktop){
+		top: 9rem;
+		left: $header-width-desktop;
+	}
+
+
+	&__item{
+		padding: 0.7rem 1rem;
+		list-style: none;
+		background-color: $color-gray;
+		margin: 2rem 0;
+		text-align: center;
+		box-shadow: $shadow-light;
+
+		@include respond(big-desktop){
+			margin: 2.5rem 0;
+		}
+
+		&:hover,
+		&:active{
+			text-decoration-line: line-through;
+		}	
+
+		//initially, about-tab & info-tab are yellow
+		&--about, &--info{
+			background-color: $color-yellow;
+		}
+	}
+
+
+	&__link{
+		font-size: 1.1rem;
+		font-weight: 400;
+
+		@include respond(sm-tab-land){
+			font-size: 1rem;
+		}
+
+		@include respond(med-desktop){
+			font-size: 1.2rem;
+		}
+
+		&:link,
+		&:visited{
+			text-decoration: none;
+			color: #000000;
+		}
+	}
+
+}

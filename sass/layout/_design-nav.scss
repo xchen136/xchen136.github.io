@@ -1,0 +1,135 @@
+
+
+.design-nav{
+	position: relative;
+	@include centerH;
+
+	width: 90%;
+	height: 17vh;
+
+	@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+		height: 13rem;
+	}
+
+	@include respond(big-phone){
+		height: 11rem;
+	}
+
+
+	//navigation containers
+	&__left, &__middle, &__right{
+		position: relative;
+		display: inline-block;
+		width: 37%;
+		height: 100%;
+	}
+
+	&__left,
+	&__right{
+		@include respond(big-tab-port){
+			display: none;
+		}
+	}
+
+	&__middle{
+		width: 25%;
+
+		@include respond(big-tab-port){
+			@include centerH;
+			width: 27rem;
+		}
+
+		@include respond(big-phone){
+			width: 30rem;
+		}
+
+		@include respond(sm-phone){
+			width: 33rem;
+		}
+	}
+
+
+	//navigation titles
+	&__prevTitle, &__nextTitle{
+		position: absolute;
+		@include centerV;
+		opacity: 0;
+		font-size: 2rem;
+		color: $color-gray-dark;
+
+		@media(hover:none){
+			opacity: 1;
+		}
+	}
+
+
+	&__prevTitle{	
+		right: 0;
+
+		@media(hover: none){
+			left: 0;
+		}
+	}
+
+
+	&__nextTitle{
+		width: max-content;
+
+		@media(hover: none){
+			right: 0;
+		}
+	}
+
+
+	//navigation links
+	&__link{
+		&--home{
+			position: absolute;
+			@include centerHV;
+			top: 47%;
+			font-size: 3rem;
+			color: $color-gray-dark;
+
+			@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+				font-size: 4.2rem;
+			}
+
+			@include respond(big-phone){
+				font-size: 5rem;
+			}
+		}
+
+		&--prev, 
+		&--home, 
+		&--next{
+			&:hover,
+			&:active{
+				color: rgba($color-red, .8);
+			}
+		}
+
+		&--prev, 
+		&--next{
+			position: absolute;
+			@include centerV;
+			font-size: 2rem;
+			color: $color-gray;
+
+			@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+				font-size: 2.6rem;
+			}
+
+			@include respond(big-phone){
+				font-size: 3rem;
+			}
+		}
+
+		&--prev{
+			left: 0;
+		}
+
+		&--next{
+			right: 0;
+		}
+	}
+}

@@ -1,0 +1,94 @@
+
+@keyframes fade {
+    from {
+    	opacity: .4;
+	} 
+    to {
+    	opacity: 1;
+	}
+}
+
+
+@keyframes moveX{
+	from { 
+		left: .2rem; 				//color-ball shadow is 2px
+	} 
+	to { 
+		left: 13.08rem; 
+	}
+}
+
+
+@keyframes moveY {
+	from { 
+		top: .2rem;  
+	} 
+	to { 
+		top: 8.04rem; 
+	}
+}
+
+
+@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+
+	@keyframes moveX{
+		from { 
+			left: .2rem;				
+		} 
+		to { 
+			left: 24.84rem;
+		}	
+	}		
+}
+
+
+@media (max-width: 46.88em), (hover:none){		//sm-tab-port
+
+	@keyframes moveY{
+		from { 
+			top: .2rem;
+		} 
+		to { 
+			top: 15.32rem;
+		}
+	}		
+}
+
+
+@keyframes moveTitleLeft{
+	0%{
+		opacity: 0;
+		left: 50%;
+	}
+
+	100%{
+		opacity: 1;
+		left: 0;
+	}
+}
+
+
+@keyframes moveTitleRight{
+	0%{
+		opacity: 0;
+		right: 50%;
+	}
+
+	100%{
+		opacity: 1;
+		right: 0;
+	}
+}
+
+
+@keyframes scrollDown{
+	0%{
+		right: 0;
+	}
+
+	100%{
+		right: 75%;
+	}
+}
+
+

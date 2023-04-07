@@ -1,0 +1,22 @@
+
+.center{
+	text-align: center;
+}
+
+a{
+	text-decoration: underline;
+	color: white;
+}
+
+img{
+	border-radius: 8px;
+	border: 1px solid white;
+}
+
+body{
+	color: white;
+	font-family:  "Bodoni MT", "Times New Roman", "Serif";
+	background-image: url("../image/black-blur.jpg");
+	background-size: cover;
+}
+

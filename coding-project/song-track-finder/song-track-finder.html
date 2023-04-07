@@ -1,0 +1,70 @@
+
+<!-- 
+last.fm api
+Application name	Song Track Finder
+API key				1f3539347e22d278c72986ded555a3fc 
+Registered to		wata_hia 
+
+spotify api
+Application name	Song Track Finder
+Client ID			d0f07b6e6bbf4a7fb658f959a0317157
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Song Track Finder</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<div class="center">
+			<h1>Song Track Finder</h1>
+
+			<input id="inputTrack" type="text" name="trackName" placeholder="Enter Track Name">
+			<input id="inputArtist" type="text" name="artistName" placeholder="Enter Artist Name">
+			<button type="button"  onclick="findTrack(document.getElementById('inputTrack').value, document.getElementById('inputArtist').value);">Search</button>
+		
+			<br><br>
+			<div id="image" class="rounded-image">
+			</div>
+			
+			<br>
+			<div id="trackLink">
+			</div>
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+		
+
+		function findTrack(track, artist){
+			let lastfmKey = "1f3539347e22d278c72986ded555a3fc";
+			let spotifyKey = "d0f07b6e6bbf4a7fb658f959a0317157";
+			var lastfm = "http://ws.audioscrobbler.com/2.0/?method=track.search&track=" +track+ "&artist=" +artist+ "&api_key=" +lastfmKey+ "&format=json";
+		
+			if(track == '' || artist == ''){
+				alert("Fill in both track name and artist");
+			}
+			else{
+				$.getJSON(lastfm, function(data){
+					if(data.results.trackmatches.track.length == 0){
+						alert("Not Found!");
+					}
+					else{
+						var tName = data.results.trackmatches.track[0].name;
+						var tLink = data.results.trackmatches.track[0].url;
+						var extraLargeImage = data.results.trackmatches.track[0].image.length;
+						var tImage = data.results.trackmatches.track[0].image[extraLargeImage-1]["#text"];
+						$('#image').html('<img alt="artist image" src="' + tImage + '">');
+						$('#trackLink').html('<a href="' + tLink + '">' + tName + '</a>');
+					}
+				})
+
+				$.getJSON("https://api.spotify.com/v1/tracks/"+ spotifyKey, function(data){
+					console.log(data);
+				});
+			}
+		}
+	</script>
+</html>
