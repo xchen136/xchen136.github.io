@@ -1,0 +1,47 @@
+
+.section-title{
+	position: relative;
+	margin-bottom: 3rem;
+
+	&:first-of-type{
+		margin-bottom: 1.5rem;
+	}
+
+	@include respond(big-tab-port){
+		margin-bottom: 3.5rem;
+	}
+
+	@include respond(big-phone){
+		margin-bottom: 6rem;
+	}
+	
+
+	&__divider{
+		position: absolute;
+		z-index: 1;
+		left: -5%;
+		top: 63%;
+		width: 110%;
+		height: 6px;
+		border-top: 2px solid rgba($color-red, 0.8);
+		border-bottom: .6px solid rgba($color-red, 0.8);
+		
+		@include respond(big-tab-land){
+			top: 58%;
+			border-top: 1.6px solid rgba($color-red, 0.8);
+			border-bottom: .5px solid rgba($color-red, 0.8);
+		}
+
+		@include respond(med-desktop){
+			height: 8.5px;
+			border-top: 2.4px solid rgba($color-red, 0.8);
+			border-bottom: 1px solid rgba($color-red, 0.8);
+		}
+
+		@include respond(huge-desktop){
+			height: 12px;
+			border-top: 3px solid rgba($color-red, 0.8);
+			border-bottom: 1.2px solid rgba($color-red, 0.8);
+		}
+	}
+}

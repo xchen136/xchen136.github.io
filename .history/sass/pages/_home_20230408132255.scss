@@ -91,24 +91,16 @@
 	}
 
 	.skill-box-col{
-		display: none;
 		@include respond(sm-phone){
-			display: block;
+			display: none;
 		}			
-
-		&__section {
-			@include respond(sm-phone){
-				margin: 40px 0;
-			}
-		}
 
 		&__list {
 			@include respond(sm-phone){
 				display: block;
 				font-size: 2.5rem;
 				font-weight: 400;
-				padding: 0 5px;
-				line-height: 22px;
+				padding: 0 10px;
 			}
 		}
 	}
@@ -167,7 +159,6 @@
 		}
 
 		@include respond(sm-phone){
-			font-size: 2.5rem;
 			border-top: 1px solid #000000;
 		}
 
