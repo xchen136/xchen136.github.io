@@ -1,16 +1,16 @@
 
 
-html, body{	
+html, body{
+	margin: 0 auto;
+	
 	height: 100%;
-	width: 100%;
-	background: url(img/RedSunset.jpg) no-repeat center center fixed;
-	background-size: cover;
 }
 
 
 canvas{
-	height: 100%;
 	width: 100%;
+	/* background-image: url("img/RedSunset.jpg"); */
+	background: url(img/RedSunset.jpg) no-repeat center center fixed;
 }
 
 
