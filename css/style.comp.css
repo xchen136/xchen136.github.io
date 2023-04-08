@@ -1276,7 +1276,7 @@ body {
     width: 60%;
     height: 100%;
     margin: 0 auto;
-    background-size: 2rem 100%;
+    background-size: 10rem 100%;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4) 50%, transparent 50%); }
     @media (max-width: 56.25em) {
       .header__divider-line {
