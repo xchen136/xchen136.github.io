@@ -46,7 +46,7 @@
 
 		@include respond(sm-phone){
 			width: 47rem;
-			height: 65rem;
+			height: 70rem;
 			margin-top: 5rem;
 		}
  
@@ -73,7 +73,7 @@
 				position: relative;
 				@include centerH;
 				width: 80%;
-				height: 54%;
+				height: 50%;
 				margin-top: 2rem;		
 			}
 		}
@@ -136,7 +136,7 @@
 			bottom: 0;
 			text-align: center;
 			width: 80%;
-			height: 42%;
+			height: 47%;
 		}
 	}
 

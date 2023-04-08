@@ -1081,8 +1081,8 @@ body {
         height: 25rem; } }
     @media (max-width: 31.25em) {
       .header__profile {
-        width: 33rem;
-        height: 42rem;
+        width: 47rem;
+        height: 65rem;
         margin-top: 5rem; } }
     @media (min-width: 93.75em) {
       .header__profile {
@@ -1106,7 +1106,7 @@ body {
           left: 50%;
           transform: translateX(-50%);
           width: 80%;
-          height: 50%;
+          height: 54%;
           margin-top: 2rem; } }
     .header__profile-avatar {
       cursor: pointer; }
@@ -1157,7 +1157,7 @@ body {
       bottom: 0;
       text-align: center;
       width: 80%;
-      height: 47%; } }
+      height: 42%; } }
   .header__profileLinks {
     position: absolute;
     left: 50%;
