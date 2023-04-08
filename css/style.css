@@ -1170,7 +1170,8 @@ body {
     font-size: 2.5rem;
     color: #707070; }
     .header__profileItem:hover {
-      color: #000000; }
+      color: #000000;
+      cursor: pointer; }
     @media (max-width: 75em) {
       .header__profileItem {
         margin-right: 2rem; } }

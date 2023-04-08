@@ -27,7 +27,22 @@ $(window).bind("load", function(){
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+    //click "email" icon to copy email onto clipboard
+
+    var clipboard = new ClipboardJS('.header__profileItem--email');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+
+
     //click "email" icon to change tooltip text
+
     $(".header__profileItem--email").click(function(){
         navigator.clipboard.writeText("to.xiaominchen@gmail.com");
         $(this).attr("tooltip", "email copied to clipboard!");
